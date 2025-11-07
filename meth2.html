@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>   
+<script>
+    function kubusInhoud(hoogte, breedte, diepte){
+        console.log(hoogte*breedte*diepte);
+        return hoogte*breedte*diepte;
+    }
+    function cylinderInhoud(radius, hoogte){
+        console.log(radius * radius * Math.PI * hoogte);
+        return radius * radius * Math.PI * hoogte;
+    }
+    function langeZijde(zijde1, zijde2){
+        let pythagoras=(zijde1 * zijde1) + (zijde2 * zijde2)
+        console.log(Math.sqrt(pythagoras));
+    }
+    function average7(nummer1, nummer2, nummer3, nummer4, nummer5, nummer6, nummer7){
+        let totalNumbers=nummer1 + nummer2 + nummer3 + nummer4 + nummer5 + nummer6 + nummer7;
+        console.log(totalNumbers/7);
+    }
+    kubusInhoud(10, 5, 10);
+    cylinderInhoud(10, 5);
+    langeZijde(3, 4);
+    average7(1, 2, 3, 4, 5, 6, 7);
+</script>
+</html>
