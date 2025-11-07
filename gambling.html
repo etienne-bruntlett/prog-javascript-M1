@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>D&D</h1>
+    <div id="str"></div>
+    <div id="dex"></div>
+    <div id="con"></div>
+    <div id="int"></div>
+    <div id="wis"></div>
+    <div id="cha"></div>
+    <button onclick="rollChar()" ondblclick="rollChar20()">Roll Stats</button>
+    <script>
+    function rollDice(){
+       return Math.ceil(Math.random() * 6);
+    }
+
+    function rollStat(){
+        let d1 = rollDice();
+        let d2 = rollDice();
+        let d3 = rollDice();
+        let d4 = rollDice();
+
+        let sum = d1+d2+d3+d4;
+        let min = Math.min(d1, d2, d3, d4);
+        let _4d6 = sum - min;
+        return _4d6;
+    }
+
+    function rollChar(){
+        let strEl = document.getElementById("str");
+        strEl.textContent = "STR: " + rollStat();
+
+        let dexEl = document.getElementById("dex");
+        dexEl.textContent = "DEX: " + rollStat();
+
+        let conEl = document.getElementById("con");
+        conEl.textContent = "CON: " + rollStat();
+
+        let intEl = document.getElementById("int");
+        intEl.textContent = "INT: " + rollStat();
+
+        let wisEl = document.getElementById("wis");
+        wisEl.textContent = "WIS: " + rollStat();
+
+        let chaEl = document.getElementById("cha");
+        chaEl.textContent = "CHA: " + rollStat();
+    }
+    rollChar();
+
+    function rollChar20(){
+        let strEl = document.getElementById("str");
+        strEl.textContent = "STR: 20";
+
+        let dexEl = document.getElementById("dex");
+        dexEl.textContent = "DEX: 20";
+
+        let conEl = document.getElementById("con");
+        conEl.textContent = "CON: 20";
+
+        let intEl = document.getElementById("int");
+        intEl.textContent = "INT: 20";
+
+        let wisEl = document.getElementById("wis");
+        wisEl.textContent = "WIS: 20";
+
+        let chaEl = document.getElementById("cha");
+        chaEl.textContent = "CHA: 20";
+    }
+
+    </script>
+</body>
+</html>
